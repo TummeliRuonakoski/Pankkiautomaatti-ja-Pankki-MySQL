@@ -13,7 +13,7 @@ public class Tietokanta {
 	public Connection yhteydenAvaus() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pankkiautomaatti?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "tummeli", "tummeli");
+			this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pankkiautomaatti?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "tunnus", "salasana");
 			return con;
 		} catch (Exception e) {
 
