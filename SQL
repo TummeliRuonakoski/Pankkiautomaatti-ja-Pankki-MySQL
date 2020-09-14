@@ -1,0 +1,18 @@
+| Asiakkaat | CREATE TABLE `Asiakkaat` (
+  `nimi` varchar(50) DEFAULT NULL,
+  `hetu` char(11) NOT NULL,
+  `osoite` varchar(100) DEFAULT NULL,
+  `suuntanumero` int DEFAULT NULL,
+  `kaupunki` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`hetu`)
+) 
+
+| Tilit | CREATE TABLE `Tilit` (
+  `hetu` char(11) DEFAULT NULL,
+  `tilinumero` char(18) DEFAULT NULL,
+  `kortinnumero` char(16) DEFAULT NULL,
+  `saldo` int DEFAULT NULL,
+  `salasana` varchar(45) DEFAULT NULL,
+  KEY `hetu` (`hetu`),
+  CONSTRAINT `tilit_ibfk_1` FOREIGN KEY (`hetu`) REFERENCES `Asiakkaat` (`hetu`)
+)
